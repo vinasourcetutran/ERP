@@ -1,0 +1,15 @@
+﻿<nav class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <a class="brand" href="/">
+            <span class="title" data-bind="text:appName"></span> 
+        </a>
+        <div class="btn-group" data-bind="foreach: modules">
+            <a data-bind="css: { active: isActive}, attr: { tooltip: tooltip }, text: name, click:$root.onModuleClicked" class="btn btn-info"></a>
+        </div>
+        <div class="loader pull-right" data-bind="css: { active: isModuleChanging }">
+            <div class="progress progress-striped active page-progress-bar">
+                <div class="bar" style="width: 100px;"></div>
+            </div>
+        </div>
+    </div>
+</nav>
