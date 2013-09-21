@@ -1,4 +1,4 @@
-﻿<nav class="navbar navbar-fixed-top">
+﻿<!--<nav class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <a class="brand" href="/">
             <span class="title" data-bind="text:appName"></span> 
@@ -12,4 +12,34 @@
             </div>
         </div>
     </div>
-</nav>
+</nav>-->
+<ul class="nav main" data-bind="foreach: modules">
+    <li class="ic-dashboard">
+        <a data-bind="css: { active: isActive}, attr: { tooltip: tooltip, href:'#'+ id+'/index' }, click:$root.onModuleClicked">
+            <span data-bind="text: name"></span>
+        </a>
+    </li>
+    <!--<li class="ic-form-style"><a href="javascript:"><span>Controls</span></a>
+                    <ul>
+                        <li><a href="form-controls.html">Forms</a> </li>
+                        <li><a href="buttons.html">Buttons</a> </li>
+                        <li><a href="form-controls.html">Full Page Example</a> </li>
+                        <li><a href="table.html">Page with Sidebar Example</a> </li>
+                    </ul>
+                </li>
+				<li class="ic-typography"><a href="typography.html"><span>Typography</span></a></li>
+                <li class="ic-charts"><a href="charts.html"><span>Charts & Graphs</span></a></li>
+                <li class="ic-grid-tables"><a href="table.html"><span>Data Table</span></a></li>
+                <li class="ic-gallery dd"><a href="javascript:"><span>Image Galleries</span></a>
+               		 <ul>
+                        <li><a href="image-gallery.html">Pretty Photo</a> </li>
+                        <li><a href="gallery-with-filter.html">Gallery with Filter</a> </li>
+                    </ul>
+                </li>
+                <li class="ic-notifications"><a href="notifications.html"><span>Notifications</span></a></li>-->
+</ul>
+      <!--  <div class="loader pull-right" data-bind="css: { active: isModuleChanging }">
+            <div class="progress progress-striped active page-progress-bar">
+                <div class="bar" style="width: 100px;"></div>
+            </div>
+        </div>-->

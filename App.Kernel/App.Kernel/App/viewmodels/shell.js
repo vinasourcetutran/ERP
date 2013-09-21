@@ -33,15 +33,20 @@
 
         //#region Internal Methods
         function afterCompose(parent, newChild, settings) {
-            /*var currentModuleId = router.activeRoute().settings || router.activeRoute().settings.moduleId ? router.activeRoute().settings.moduleId : '';
+            /*var currentModuleId = router.activeRoute() && router.activeRoute().settings && router.activeRoute().settings.moduleId ? router.activeRoute().settings.moduleId : '';
             if (!String.isNullOrWhiteSpace(currentModuleId) && !runtime.currentSelectedModuleId().isEqual(currentModuleId)) {
                 onModuleClicked(currentModuleId);
             }*/
+            console.log("afterCompose:" + router.activeItem());
             return router.afterCompose();
         }
         //#object life cycle
         function activate() {
             console.log('inside shell');
+            window.onresize = function () {
+                refreshUI();
+            }
+            setTimeout(window.onresize, 200);
             //get reference to logger
             //log = window.$inject.resolve('log');
 
@@ -57,9 +62,11 @@
                 //    console.log(languageService.resolve('en','core','ok'));
                 //});
                 //shell.activeModule = router.activeItem;
+                //refreshUI();
                 return router.activate(config.defaultUrl);
                 //return true;
             });
+            
         }
         //#event
         function onModuleClicked(moduleId) {
@@ -81,13 +88,17 @@
             runtime.getModule(moduleId).isActive(true);
             runtime.currentSelectedModuleId(moduleId);
             //update menu items appripriated with new selected module
-            //shell.moduleMenus(runtime.getModuleInstance(moduleId).getMainMenus());
-
+            shell.moduleMenus(runtime.getModuleInstance(moduleId).getMainMenus());
+            if (data.defaultViewUrl) {
+                router.activate(data.defaultViewUrl);
+            }
 
             //hide loading icon
             shell.isModuleChanging(false);
             //$("#rightSide").accordion({ collapsible: true });
             refreshUI();
+            
+            return true;
         }
 
         /*function activeSelectedModule(module) {
@@ -104,12 +115,43 @@
         }*/
         //update layout base on new data
         function refreshUI() {
-            //log.info('inside refresh ui of shell');
+            console.log('inside refresh ui of shell');
             //$("#rightSide").accordion({ collapsible: true });
-            $('#content').height($(document).height()-60);
-            $(".accordion").collapse();
-
+            //$('#content').height($(document).height()-60);
+            //$(".accordion").collapse();
+            setSidebarHeight();
+            setupLeftMenu();
         }
+
+        function setupLeftMenu() {
+            console.log("setupLeftMenu");
+            $("#section-menu")
+                .accordion({
+                    "header": "a.menuitem"
+                })
+                .bind("accordionchangestart", function (e, data) {
+                    data.newHeader.next().andSelf().addClass("current");
+                    data.oldHeader.next().andSelf().removeClass("current");
+                })
+                .find("a.menuitem:first").addClass("current")
+                .next().addClass("current");
+
+           // $('#section-menu .submenu').css('height', 'auto');
+        }
+        function setSidebarHeight() {
+            setTimeout(function () {
+                var height = $(document).height();
+                $('.grid_12').each(function () {
+                    height -= $(this).outerHeight();
+                });
+                height -= $('#site_info').outerHeight();
+                height -= 1;
+                //salert(height);
+                $('.sidemenu').css('height', height);
+            }, 100);
+        }
+
+
 
         //private methods
         //bootstrap all configuration modules

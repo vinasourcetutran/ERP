@@ -1,7 +1,8 @@
 ﻿define(['Kernel/routes', 'Kernel/wireup', 'Kernel/menus'], function (routes, wireupInstance, menus) {
     var module, runtime, router, injector, logger;
     module = {
-        init: init
+        init: init,
+        getMainMenus: getMainMenus
     };
 
     return module;
@@ -29,7 +30,7 @@
             id: 'kernel',
             name: 'Kernel module',
             tooltip: 'Tooltip kernel module',
-            defaultViewUrl: 'Kernel/viewmodels/index'
+            defaultViewUrl: 'kernel/index'
         };
         return moduleInfo;
     }

@@ -1,7 +1,7 @@
 ﻿define(function () {
     var routes = [
         {
-            url: 'Kernel/index',
+            url: 'kernel/index',
             visible:false,
             moduleId: 'Kernel/viewmodels/index',
             settings: {

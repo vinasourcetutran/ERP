@@ -14,6 +14,7 @@
         logger.info('Home View Activated');
         var users = datacontext.getUsers();
         logger.info(String.format('user name:{0}', users[0].name));
+        return true;
     }
     //#endregion
 });

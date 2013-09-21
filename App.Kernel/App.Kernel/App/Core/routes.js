@@ -1,7 +1,7 @@
 ﻿define(function () {
     var routes = [];
     return [{
-        url: 'Core/index',
+        url: 'core/index',
         visible: false,
         moduleId: 'Core/viewmodels/index',
         settings: {

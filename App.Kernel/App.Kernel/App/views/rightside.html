@@ -1,28 +1,19 @@
-﻿<div class="btn-group" data-bind="foreach: $root.router.visibleRoutes">
-            <a data-bind="css: { active: isActive }, attr: { href: hash }, text: name" 
-                class="btn btn-info" href="#"></a>
-        </div>
-<div id="rightSide" data-bind="foreach:moduleMenus" class="accordion">
-    
-    <div class="accordion-group">
-        <div class="accordion-heading">
-            <!-- ko if:$data.iconUrl!=undefined -->
-            <img data-bind="attr:{src:$data.iconUrl}" class="icon"/>
-            <!-- /ko -->
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#rightSide" data-bind="text:name, attr:{href:'#'+ id}"></a>
-        </div>
-        <div class="accordion-body collapse" data-bind="attr:{id:id}">
-            <div class="accordion-inner">
-                <ul data-bind="foreach:items">
-                    <li>
-                        <!-- ko if:$data.iconUrl!=undefined -->
-                        <img data-bind="attr:{src:$data.iconUrl}" class="icon" />
-                        <!-- /ko -->
-                        <a data-bind="attr:{href:'#'+url, title:name, tooltip: name}, text: name"></a>
-                    </li>
-                </ul>
-            </div>
+﻿<!-- ko if:$root.moduleMenus!=undefined && $root.moduleMenus().length>0 -->
+    <div class="box sidemenu">
+        <div class="block" id="section-menu">
+            <ul class="section menu" data-bind="foreach:moduleMenus">
+                <li>
+                    <!-- ko if:$data.iconUrl!=undefined -->
+                    <img data-bind="attr:{src:$data.iconUrl}" class="icon" />
+                    <!-- /ko -->
+                    <a class="menuitem" data-bind="text:name, attr:{href1:'#'+ id}"></a>
+
+                    <ul class="submenu" data-bind="foreach:items">
+                        <li><a data-bind="attr:{href:'#'+url, title:name, tooltip: name}, text: name"></a></li>
+                    </ul>
+
+                </li>
+            </ul>
         </div>
     </div>
-</div>
-
+<!-- /ko -->

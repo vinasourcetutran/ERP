@@ -1,7 +1,8 @@
 ﻿define(['core/routes', 'core/wireup', 'core/menus'], function (routes, wireupInstance, menus) {
     var module, runtime, router, injector, logger;
     module = {
-        init: init
+        init: init,
+        getMainMenus: getMainMenus
     };
 
     return module;
@@ -29,7 +30,7 @@
             id: 'core',
             name: 'Core module',
             tooltip: 'Tooltip core module',
-            defaultViewUrl: 'Core/viewmodels/index'
+            defaultViewUrl: 'core/index'
         };
         return moduleInfo;
     }

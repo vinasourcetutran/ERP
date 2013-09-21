@@ -36,6 +36,7 @@ C:\data\Project\ERP\App.Kernel\App.Kernel\bin\WebMatrix.Data.xml
 C:\data\Project\ERP\App.Kernel\App.Kernel\bin\WebMatrix.WebData.xml
 C:\data\Project\ERP\App.Kernel\App.Kernel\obj\Debug\App.Kernel.dll
 C:\data\Project\ERP\App.Kernel\App.Kernel\obj\Debug\App.Kernel.pdb
+C:\data\Project\ERP\App.Kernel\App.Kernel\obj\Debug\App.Kernel.csprojResolveAssemblyReference.cache
 D:\projects\ERP\App.Kernel\App.Kernel\bin\App.Kernel.dll
 D:\projects\ERP\App.Kernel\App.Kernel\bin\App.Kernel.pdb
 D:\projects\ERP\App.Kernel\App.Kernel\bin\Antlr3.Runtime.dll
@@ -75,4 +76,3 @@ D:\projects\ERP\App.Kernel\App.Kernel\bin\WebMatrix.WebData.xml
 D:\projects\ERP\App.Kernel\App.Kernel\obj\Debug\App.Kernel.csprojResolveAssemblyReference.cache
 D:\projects\ERP\App.Kernel\App.Kernel\obj\Debug\App.Kernel.dll
 D:\projects\ERP\App.Kernel\App.Kernel\obj\Debug\App.Kernel.pdb
-C:\data\Project\ERP\App.Kernel\App.Kernel\obj\Debug\App.Kernel.csprojResolveAssemblyReference.cache

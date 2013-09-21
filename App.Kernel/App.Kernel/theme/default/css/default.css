@@ -1,0 +1,15 @@
+.left-main-nav {
+    width:250px;
+    margin: 0px;
+    float:left;
+}
+
+.main-content {
+    margin-left:260px;
+    display:block;
+    margin-right:3px;
+}
+.main-content .main-content-box{
+    margin-top:5px;
+    margin-bottom:0px;
+}

@@ -1,18 +1,47 @@
-﻿<div>
-    <header>
-        <!--ko compose: {view: 'nav'} -->
-        <!--/ko-->
-    </header>
-    <section id="content" class="main container-fluid">
-            <div class="main-content">
-                <!--ko compose: {model: $root.activeModuleDefaultView, 
-            afterCompose: afterCompose, 
-            transition: 'entrance'} -->
-                <!--/ko-->
+﻿<div class="header-repeat">
+    <div id="branding">
+        <div class="floatleft">
+            <img src="img/logo.png" alt="Logo" />
+        </div>
+        <div class="floatright">
+            <div class="floatleft">
+                <img src="img/img-profile.jpg" alt="Profile Pic" />
             </div>
-    </section>
-    <footer>
-        <!--ko compose: {view: 'footer'} -->
-        <!--/ko-->
-    </footer>
+            <div class="floatleft marginleft10">
+                <ul class="inline-ul floatleft">
+                    <li>Hello Admin</li>
+                    <li><a href="#">Config</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+                <br />
+                <span class="small grey">Last Login: 3 hours ago</span>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+<div class="clear">
+</div>
+<div>
+    <!--ko compose: {view: 'nav'} -->
+    <!--/ko-->
+</div>
+<div class="clear"></div>
+<div class="left-main-nav">
+    <!--ko compose: {view: 'rightside'} -->
+    <!--/ko-->
+</div>
+<div class="main-content">
+    <div class="box round first main-content-box">
+        <h2>Buttons</h2>
+        <div class="block">
+            <!--ko compose: {model: router.activeItem, 
+            afterCompose: router.afterCompose, 
+            transition: 'entrance'} -->
+            <!--/ko-->
+        </div>
+    </div>
+</div>
+<div class="clear">
 </div>
