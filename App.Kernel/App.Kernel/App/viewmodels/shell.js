@@ -44,8 +44,9 @@
         function activate() {
             console.log('inside shell');
             window.onresize = function () {
-                refreshUI();
+                setTimeout(refreshUI, 100);
             }
+            //refreshUI();
             setTimeout(window.onresize, 200);
             //get reference to logger
             //log = window.$inject.resolve('log');
@@ -97,8 +98,6 @@
             shell.isModuleChanging(false);
             //$("#rightSide").accordion({ collapsible: true });
             refreshUI();
-            
-            return true;
         }
 
         /*function activeSelectedModule(module) {
@@ -119,13 +118,18 @@
             //$("#rightSide").accordion({ collapsible: true });
             //$('#content').height($(document).height()-60);
             //$(".accordion").collapse();
-            setSidebarHeight();
             setupLeftMenu();
+            setSidebarHeight();
         }
 
         function setupLeftMenu() {
             console.log("setupLeftMenu");
-            $("#section-menu")
+            $("#section-menu").accordion().accordion("destroy");
+            $("#section-menu").accordion({
+                collapsible: true,
+                heightStyle:'content'
+            });
+            /*$("#section-menu")
                 .accordion({
                     "header": "a.menuitem"
                 })
@@ -135,19 +139,30 @@
                 })
                 .find("a.menuitem:first").addClass("current")
                 .next().addClass("current");
-
+                */
            // $('#section-menu .submenu').css('height', 'auto');
         }
         function setSidebarHeight() {
             setTimeout(function () {
-                var height = $(document).height();
-                $('.grid_12').each(function () {
+                /*var height = $(document).height();
+                console.log("document height:"+ height);
+                $('#header, #nav').each(function () {
                     height -= $(this).outerHeight();
+                    console.log(this.id + ":" + $(this).outerHeight());
                 });
-                height -= $('#site_info').outerHeight();
-                height -= 1;
+                //height -= 1;
+                console.log("side menu height:" + height);
                 //salert(height);
-                $('.sidemenu').css('height', height);
+                $('.sidemenu').css('height', height);*/
+                
+                var nav = $('#nav'), height = $('#footer').offset().top - nav.offset().top - nav.height();
+
+                runtime.mainContentBoxInnerHeight(height - 70);
+                runtime.leftMenuHeight(height);
+
+                $('.sidemenu').css('height', runtime.leftMenuHeight());
+                $('#main-content-box-inner').css('height', runtime.mainContentBoxInnerHeight());
+                
             }, 100);
         }
 

@@ -161,6 +161,29 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\config.js" />
+    <Content Include="App\tenancy\datacontexts\DataContext.js" />
+    <Content Include="App\tenancy\datacontexts\TestDataContext.js" />
+    <Content Include="App\tenancy\languages\resource_en.js" />
+    <Content Include="App\tenancy\menus.js" />
+    <Content Include="App\tenancy\module.js" />
+    <Content Include="App\tenancy\routes.js" />
+    <Content Include="App\tenancy\services\Injector.js" />
+    <Content Include="App\tenancy\services\LanguageService.js" />
+    <Content Include="App\tenancy\services\LocalizationService.js" />
+    <Content Include="App\tenancy\services\logger.js" />
+    <Content Include="App\tenancy\services\logger\ConsoleLogger.js" />
+    <Content Include="App\tenancy\services\logger\DefaultLogger.js" />
+    <Content Include="App\tenancy\viewmodels\details.js" />
+    <Content Include="App\tenancy\viewmodels\home.js" />
+    <Content Include="App\tenancy\viewmodels\index.js" />
+    <Content Include="App\tenancy\viewmodels\settings\accounts.js" />
+    <Content Include="App\tenancy\viewmodels\settings\taxes.js" />
+    <Content Include="App\tenancy\views\details.html" />
+    <Content Include="App\tenancy\views\home.html" />
+    <Content Include="App\tenancy\views\index.html" />
+    <Content Include="App\tenancy\views\settings\accounts.html" />
+    <Content Include="App\tenancy\views\settings\taxes.html" />
+    <Content Include="App\tenancy\wireup.js" />
     <Content Include="App\Core\languages\resource_en.js" />
     <Content Include="App\Core\menus.js" />
     <Content Include="App\Core\viewmodels\index.js" />
@@ -175,7 +198,11 @@
     <Content Include="App\Kernel\services\logger\DefaultLogger.js" />
     <Content Include="App\Kernel\services\LanguageService.js" />
     <Content Include="App\Kernel\viewmodels\index.js" />
+    <Content Include="App\Kernel\viewmodels\settings\accounts.js" />
+    <Content Include="App\Kernel\viewmodels\settings\taxes.js" />
     <Content Include="App\Kernel\views\index.html" />
+    <Content Include="App\Kernel\views\settings\accounts.html" />
+    <Content Include="App\Kernel\views\settings\taxes.html" />
     <Content Include="App\Kernel\wireup.js" />
     <Content Include="App\Core\module.js" />
     <Content Include="App\Core\routes.js" />
@@ -253,6 +280,7 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="theme\default\buttons.html" />
     <Content Include="theme\default\charts.html" />
+    <Content Include="theme\default\css\default.css" />
     <Content Include="theme\default\index.html" />
     <Content Include="theme\default\css\960.css" />
     <Content Include="theme\default\css\facebox.css" />
@@ -611,6 +639,7 @@
     <Content Include="theme\default\js\jqPlot\plugins\jqplot.pointLabels.min.js" />
     <Content Include="theme\default\js\jqPlot\plugins\jqplot.trendline.min.js" />
     <Content Include="theme\default\js\jquery-1.6.4.min.js" />
+    <Content Include="theme\default\js\jquery-ui-1.10.3.min.js" />
     <Content Include="theme\default\js\jquery-ui\external\jquery.bgiframe-2.1.2.js" />
     <Content Include="theme\default\js\jquery-ui\external\jquery.cookie.js" />
     <Content Include="theme\default\js\jquery-ui\external\jquery.metadata.js" />

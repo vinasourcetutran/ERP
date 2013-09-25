@@ -1,36 +1,31 @@
 ﻿define(function () {
     var menus = [
             {
-                id: 'kernelmenu1',
-                url: 'kernelmenu1',
-                name: 'kernel menu 1',
+                id: 'kernel_setting',
+                url: 'kernel/settings',
+                name: 'Settings',
                 index: 0,
                 items: [{
-                    url: 'Kernel/home',
-                    id: 'home',
-                    name: 'Home',
+                    url: 'Kernel/settings/accounts',
+                    id: 'kernel_setting_account',
+                    name: 'Accounts',
                     index: 0,
-                    moduleId: 'Kernel/viewmodels/home',
+                    moduleId: 'Kernel/viewmodels/settings/accounts',
                     settings: {
                         moduleId: 'kernel'
                     }
                 }, {
-                    url: 'Kernel/details',
-                    id: 'detail',
-                    name: 'Detail',
+                    url: 'Kernel/settings/taxes',
+                    id: 'kernel_setting_taxes',
+                    name: 'Taxes',
                     index: 0,
-                    moduleId: 'Kernel/viewmodels/details',
+                    moduleId: 'Kernel/viewmodels/settings/taxes',
                     settings: {
                         moduleId: 'kernel'
                     }
-                }]
-            }, {
-                id: 'kernelmenu2',
-                url: 'kernelmenu2',
-                name: 'kernel menu 2',
-                index: 1,
-                items: []
-            }
+                }
+                ]
+            },
     ];
     return menus;
 });

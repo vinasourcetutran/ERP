@@ -13,7 +13,8 @@
                     url: menu.url,
                     moduleId: menu.moduleId,
                     visible: false,
-                    settings: menu.settings
+                    settings: menu.settings,
+                    name:menu.name
                 };
                 results.push(route);
             }

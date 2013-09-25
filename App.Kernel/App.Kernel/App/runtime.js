@@ -30,6 +30,8 @@ define(function () {
         moduleMenus = {};
 
     runtime = {
+        mainContentBoxInnerHeight: ko.observable(0),
+        leftMenuHeight:ko.observable(0),
         currentSelectedModuleId: currentSelectedModuleId,
         modules: modules,
         moduleInstances: moduleInstances,

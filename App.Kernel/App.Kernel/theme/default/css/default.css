@@ -1,3 +1,6 @@
+body {
+    background-color:#2E5E79;
+}
 .left-main-nav {
     width:250px;
     margin: 0px;
@@ -9,7 +12,15 @@
     display:block;
     margin-right:3px;
 }
-.main-content .main-content-box{
-    margin-top:5px;
-    margin-bottom:0px;
+    .main-content .main-content-box {
+        margin-top: 5px;
+        margin-bottom: 0px;
+    }
+    .main-content .main-content-box .main-content-box-inner {
+        overflow-y: auto;
+    }
+#footer {
+    position:absolute;
+    bottom:0px;
+    width:100%;
 }

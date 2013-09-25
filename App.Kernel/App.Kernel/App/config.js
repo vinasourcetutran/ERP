@@ -1,9 +1,9 @@
 ﻿define(function () {
-    var config, modules=['Kernel','Core'];
+    var config, modules = ['Kernel', 'tenancy'];
     config = {
         appIcon: '/content/images/icon.png',
         appName: 'SPA Demo',
-        defaultUrl: 'Kernel/index',
+        defaultUrl: 'kernel/index',
         modules: modules
     };
     return config;

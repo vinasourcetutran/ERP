@@ -1,4 +1,4 @@
-﻿<div class="header-repeat">
+﻿<div id="header" class="header-repeat">
     <div id="branding">
         <div class="floatleft">
             <img src="img/logo.png" alt="Logo" />
@@ -23,7 +23,7 @@
 </div>
 <div class="clear">
 </div>
-<div>
+<div id="nav">
     <!--ko compose: {view: 'nav'} -->
     <!--/ko-->
 </div>
@@ -34,14 +34,15 @@
 </div>
 <div class="main-content">
     <div class="box round first main-content-box">
-        <h2>Buttons</h2>
-        <div class="block">
+        <h2 data-bind="text: router.activeItem().title" >Buttons</h2>
+        <div class="block main-content-box-inner" id="main-content-box-inner">
             <!--ko compose: {model: router.activeItem, 
-            afterCompose: router.afterCompose, 
+            afterCompose: afterCompose, 
             transition: 'entrance'} -->
             <!--/ko-->
         </div>
     </div>
 </div>
-<div class="clear">
-</div>
+<div id="footer">
+<!--ko compose: {view: 'footer'} --><!--/ko-->
+    </div>

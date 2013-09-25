@@ -1,12 +1,11 @@
-﻿<!-- ko if:$root.moduleMenus!=undefined && $root.moduleMenus().length>0 -->
-    <div class="box sidemenu">
-        <div class="block" id="section-menu">
-            <ul class="section menu" data-bind="foreach:moduleMenus">
+﻿    <div class="box sidemenu">
+        <div class="block">
+            <ul id='section-menu' class="section-menu section menu" data-bind="foreach:moduleMenus">
                 <li>
                     <!-- ko if:$data.iconUrl!=undefined -->
                     <img data-bind="attr:{src:$data.iconUrl}" class="icon" />
                     <!-- /ko -->
-                    <a class="menuitem" data-bind="text:name, attr:{href1:'#'+ id}"></a>
+                    <a class="menuitem" data-bind="text:name"></a>
 
                     <ul class="submenu" data-bind="foreach:items">
                         <li><a data-bind="attr:{href:'#'+url, title:name, tooltip: name}, text: name"></a></li>
@@ -16,4 +15,5 @@
             </ul>
         </div>
     </div>
-<!-- /ko -->
+
+
